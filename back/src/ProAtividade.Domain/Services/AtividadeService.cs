@@ -24,7 +24,7 @@ namespace ProAtividade.Domain.Services
             if (await _atividadeRepo.PegaPorIdAsync(model.Id) == null)
             {
                 _atividadeRepo.Adicionar(model);
-                if (await _atividadeRepo.SalvarMudancasAsync());
+                if (await _atividadeRepo.SalvarMudancasAsync())
                     return model;
             }
 
@@ -39,7 +39,7 @@ namespace ProAtividade.Domain.Services
             if (await _atividadeRepo.PegaPorIdAsync(model.Id) != null)
             {
                 _atividadeRepo.Atualizar(model);
-                if (await _atividadeRepo.SalvarMudancasAsync());
+                if (await _atividadeRepo.SalvarMudancasAsync())
                     return model;
             }
 

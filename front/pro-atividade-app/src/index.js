@@ -3,11 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
+import Menu from './components/Menu';
+import 'bootswatch/dist/lumen/bootstrap.min.css'; // Added this :boom:
+import { BrowserRouter as Router } from 'react-router-dom';
 
 ReactDOM.render(
-  <div className='container'>
-    <App />
-  </div>,
+  <Router>
+    <Menu />
+    <div className='container'>
+      <App />
+    </div>
+  </Router>,
+
   document.getElementById('root')
 );
 
